@@ -39,5 +39,8 @@ button {
     color: #000000; 
     border: 1px solid #ccc;
     border-radius: 3px;
-
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #80deea; 
 }
