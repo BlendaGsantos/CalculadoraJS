@@ -23,7 +23,7 @@ JavaScript para a lógica da calculadora
 
 Esse é o resultado visual:
 
-🔹 Teste a calculadora em ação: [CalculadoraJS](https://blendagsantos.github.io/CalculadoraJS/)
+🔹 Teste a calculadora em ação: [CalculadoraJS](https://blendagsantos.github.io/calculadoraJS/)
 
 ![Visual da Calculadora](imag.png)
 
