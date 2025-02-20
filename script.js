@@ -1,11 +1,18 @@
 function appendNumber(number) {
     const display = document.getElementById('display');
+    if (display.value === 'Operação impossível' || display.value === 'Valor inválido' || display.value === 'Não dá para dividir por zero') {
+        display.value = '';  
+    }
     display.value += number;
 }
 
 function appendOperation(operation) {
     const display = document.getElementById('display');
     const currentValue = display.value.trim();
+
+    if (display.value === 'Operação impossível' || display.value === 'Valor inválido' || display.value === 'Não dá para dividir por zero') {
+        display.value = '';  
+    }
 
     if (currentValue === '' || isOperator(currentValue.slice(-1))) {
         return;
@@ -31,6 +38,11 @@ function calculateResult() {
 
     if (!isValidExpression(expression)) {
         display.value = 'Valor inválido';
+        return;
+    }
+
+    if (expression.includes('/=') || expression.includes('* ') || expression.includes('+ ') || expression.includes('- ') || expression.endsWith('/')) {
+        display.value = 'Operação impossível';
         return;
     }
 
